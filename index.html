@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav"> <!-- Desktop navigation -->
+      <div class="logo">Dachi Tarughishvili</div> 
+      
+      <div>
+        <ul class="nav-links"> <!-- Navigation links -->
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav"> 
+      <div class="logo">Dachi Tarughishvili</div> <!-- Logo -->
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links"> <!-- Navigation links -->
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile"> <!-- Profile section -->
+      <div class="section__pic-container">
+        <img src="./assets/dachi.png" alt="Dachi profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title"><span id="typing-container"><span id="typing-name"></span></span></h1>
+        <p class="section__text__p2">Computer Science Student</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume 2.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/instagram.png"
+            alt="My Instagram profile"
+            class="icon"
+                onclick="location.href='https://www.instagram.com/dachitaru/'"
+            />
+            <img
+                src="./assets/github.png"
+                alt="My Github profile"
+                class="icon"
+                onclick="location.href='https://github.com/dachi256'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about"> <!-- About section -->
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/second.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>Game Development <br />Frontend Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>New York University Undegraduate<br />European School IB</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+                Hey there! I'm Dachi, a computer science student at NYU with a passion for creating engaging digital experiences. From developing games and interactive websites to exploring the possibilities of virtual reality, I enjoy working on projects that blend technology and creativity.
+                Collaboration is a key aspect of my approach, as I believe great ideas often emerge when diverse perspectives come together. I've had the opportunity to work with talented individuals on various projects and have always found the experience enriching. I also love to photograph in my spare time.
+              Feel free to explore my work and reach out if anything resonates with you.
+            </p>
+            
+          </div>
+        </div>
+      </div> 
+      <!-- Arrow icon to scroll down -->
+      <img
+        src="./assets/arrow.png" 
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              
+              </article>
+            </div>
+          </div>
+
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PHP</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+
+            <div class="details-container">
+              <h2 class="experience-sub-title">Game Development</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Unity/C#</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Game Logic</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Graphic Design</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          
+
+
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">30MFF</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/dachi256/30MFF-Final'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://dachi256.github.io/30MFF-Final/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Too Close</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/dachi256/TooClose'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://dachi256.github.io/TooClose/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Beneath</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/dachi256/Beneath'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://dachi256.github.io/Beneath/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-4.png"
+                alt="Project 4"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Sharing Silence</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/awesomeadi00/CL_Web4_Sharing-Silence'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://awesomeadi00.github.io/CL_Web4_Sharing-Silence/index.html'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <!-- Game Demos section -->
+    <section id="game-demos">
+      <p class="section__text__p1">Check Out My</p>
+      <h1 class="title">Game Demos</h1>
+      <div class="game-demos-container">
+        <div class="p5js-demos">
+          <iframe src="https://editor.p5js.org/dt2307/full/Gqx2rsti9L" width="650" height="560"></iframe>
+          <iframe src="https://editor.p5js.org/dt2307/full/vrBxuAsfN" width="650" height="560"></iframe>
+        </div>
+        <div class="youtube-demos">
+          <iframe width="650" height="315" src="https://www.youtube.com/embed/iHssUu7Mv7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="650" height="315" src="https://www.youtube.com/embed/FijGB3K5jRg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="650" height="315" src="https://www.youtube.com/embed/UvLEJW8AYtk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="650" height="315" src="https://www.youtube.com/embed/3ETRcMW1-Dk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#gallery'">
+    </section>
+
+
+    <section id="gallery"> <!-- Gallery section -->
+      <p class="section__text__p1">Check Out My</p>
+      <h1 class="title">Photography</h1>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="./assets/photos1.jpg" alt="Photo 1" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">Blue Sky Carousele</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos2.jpg" alt="Photo 2" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">City Stranger</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos3.jpg" alt="Photo 3" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">Liminal Lamp</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos4.jpg" alt="Photo 4" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">Coney Island</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos5.jpg" alt="Photo 5" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">Quieter Inside</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos6.jpg" alt="Photo 6" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">Little Island</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos7.jpg" alt="Photo 7" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">Purple Wings</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos8.jpg" alt="Photo 8" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">Sunset in Tskneti</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos9.jpg" alt="Photo 9" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">Lost in Golden Meadows</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos10.jpg" alt="Photo 10" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">Through the Commute</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos11.jpg" alt="Photo 11" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">October Leaves</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos12.jpg" alt="Photo 12" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">Hiding Cat</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos13.jpg" alt="Photo 13" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">Dumbo</p>
+          </div>
+        </div>
+      
+        <div class="gallery-item">
+          <img src="./assets/photos14.jpg" alt="Photo 14" class="gallery-img">
+          <div class="gallery-overlay">
+            <p class="gallery-text">Green Bicycle</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-text-container">
+        <p class="gallery-text">Check out more on my <a href="https://www.instagram.com/dachitaru/" target="_blank">Instagram</a></p>
+      </div>
+      
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+
+
+
+
+    <!-- Contact section -->
+
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img
+                    src="./assets/email.png"
+                    alt="Email icon"
+                    class="icon contact-icon email-icon"
+                />
+                <p><a href="mailto:dt2307@nyu.edu">dt2307@nyu.edu</a> | <a href="tel:+971564087947">+971 5640 87947</a></p>
+            </div>
+        </div>
+    </section>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container"> <!-- Navigation links -->
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
