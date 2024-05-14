@@ -35,5 +35,43 @@ function toggleMenu() { // function to toggle the menu
   
   typeNameEffect();
 
+function enlargePhoto(event) {
+  const clickedElement = event.target;
+  const galleryItem = clickedElement.closest('.gallery-item');
+  const photo = galleryItem.querySelector('.gallery-img');
 
-  
+  const enlargedPhoto = document.createElement('div');
+  enlargedPhoto.classList.add('enlarged-photo');
+
+  const enlargedImg = document.createElement('img');
+  enlargedImg.src = photo.src;
+  enlargedImg.alt = photo.alt;
+
+  enlargedPhoto.appendChild(enlargedImg);
+  document.body.appendChild(enlargedPhoto);
+
+  setTimeout(() => {
+    enlargedPhoto.classList.add('show');
+  }, 0);
+
+  enlargedPhoto.addEventListener('click', closeEnlargedPhoto);
+}
+
+function closeEnlargedPhoto(event) {
+  const enlargedPhoto = event.target.closest('.enlarged-photo');
+  if (enlargedPhoto) {
+    enlargedPhoto.classList.remove('show');
+    setTimeout(() => {
+      document.body.removeChild(enlargedPhoto);
+    }, 300);
+  }
+}
+
+function attachGalleryListeners() {
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  galleryItems.forEach(item => {
+    item.addEventListener('click', enlargePhoto);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', attachGalleryListeners);
