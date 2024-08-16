@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Photos - Dachi Tarughishvili</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <nav id="desktop-nav">
+            <div class="logo">Dachi Tarughishvili</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#projects">Web Demos</a></li>
+                    <li><a href="index.html#game-demos">Game Demos</a></li>
+                    <li><a href="index.html#gallery">Photography</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">Dachi Tarughishvili</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="index.html#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="index.html#projects" onclick="toggleMenu()">Web Demos</a></li>
+                    <li><a href="index.html#game-demos" onclick="toggleMenu()">Game Demos</a></li>
+                    <li><a href="index.html#gallery" onclick="toggleMenu()">Photography</a></li>
+                    <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main role="main">
+        <section id="more-photos" class="section">
+            <h1 id="gallery" style="text-align: center;">Gallery</h1>
+
+            <div id="gallery-container" class="gallery-container">
+                <!-- Gallery items will be dynamically added here by JavaScript -->
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; font-style: italic;">More photos will be added soon!</p>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#projects">Web Demos</a></li>
+                    <li><a href="index.html#game-demos">Game Demos</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Dachi Tarughishvili. All Rights Reserved.</p>
+    </footer>
+
+    <script src="more-photos.js"></script>
+</body>
+</html>
