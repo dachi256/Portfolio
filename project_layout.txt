@@ -1,0 +1,41 @@
+--- Folder Layout ---
+.DS_Store
+[.git] (...)
+[assets]
+    ├── .DS_Store
+    ├── dachi.png
+    ├── education.png
+    ├── email.png
+    ├── github.png
+    ├── instagram.png
+    ├── linkedin.png
+    ├── phone.png
+    ├── photos1.jpg
+    ├── photos10.jpg
+    ├── photos11.jpg
+    ├── photos12.jpg
+    ├── photos13.jpg
+    ├── photos14.jpg
+    ├── photos2.jpg
+    ├── photos3.jpg
+    ├── photos4.jpg
+    ├── photos5.jpg
+    ├── photos6.jpg
+    ├── photos7.jpg
+    ├── photos8.jpg
+    ├── photos9.jpg
+    ├── photoss2.jpg
+    ├── profile-pic.png
+    ├── project-1.png
+    ├── project-2.png
+    ├── project-3.png
+    ├── project-4.png
+    ├── project-5.png
+    ├── project-6.png
+    └── resume 2.pdf
+index.html
+mediaqueries.css
+more-photos.html
+more-photos.js
+script.js
+style.css
