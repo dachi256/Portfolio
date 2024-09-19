@@ -37,5 +37,6 @@ index.html
 mediaqueries.css
 more-photos.html
 more-photos.js
+project_layout.txt
 script.js
 style.css
