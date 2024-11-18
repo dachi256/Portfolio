@@ -1,122 +1,320 @@
 @media screen and (max-width: 1400px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
-    /* .about-containers {
-      flex-wrap: wrap;
-    } */
-    #contact,
-    #projects {
-      height: fit-content;
-    }
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  #contact,
+  #projects {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* Navigation */
+  #desktop-nav {
+    display: none;
   }
   
-  @media screen and (max-width: 1200px) {
-    #desktop-nav {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-    }
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
-    }
-    #profile,
-    .section-container {
-      display: block;
-    }
-    .arrow {
-      display: none;
-    }
-    section,
-    .section-container {
-      height: fit-content;
-    }
-    section {
-      margin: 0 5%;
-    }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-    .about-containers {
-      margin-top: 0;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    #contact,
-    footer {
-      height: 40vh;
-    }
-    #profile {
-      height: 83vh;
-      margin-bottom: 0;
-    }
-    article {
-      font-size: 1rem;
-    }
-    footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
-    }
-    /* .about-containers,
-    .contact-info-upper-container,
-    .btn-container {
-      flex-wrap: wrap; */
-    /* } */
-    .contact-info-container {
-      margin: 0;
-    }
-    .contact-info-container p,
-    .nav-links li a {
-      font-size: 1rem;
-    }
-    .experience-sub-title {
-      font-size: 1.25rem;
-    }
-    .logo {
-      font-size: 1.5rem;
-    }
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-    }
-    .section__pic-container {
-      width: auto;
-      height: 46vw;
-      justify-content: center;
-    }
-    .section__text__p2 {
-      font-size: 1.25rem;
-    }
-    .title {
-      font-size: 2rem;
-    }
-    .text-container {
-      text-align: justify;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .about-containers {
-      grid-template-columns: 1fr;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    #projects .about-containers {
-      grid-template-columns: 1fr;
-    }
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 17vh;
   }
 
-  @media screen and (max-width: 1200px) {
-    .p5js-demos,
-    .youtube-demos {
-      flex-direction: column;
-      align-items: center;
-    }
+  /* Profile & Sections */
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
   }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+
+  /* Project Grid */
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Experience Section */
+  #experience .about-containers {
+    flex-direction: column;
+    align-items: center;
+  }
+  #experience .details-container {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Interactive Projects */
+  .p5js-demos,
+  .youtube-demos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Project & Video Containers */
+  .project-container,
+  .video-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-wrapper,
+  .project-description,
+  .video-wrapper,
+  .video-description {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Gallery Responsive Styles */
+  .gallery-container {
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-containers {
+    grid-template-columns: 1fr;
+  }
+  #projects .about-containers {
+    grid-template-columns: 1fr;
+  }
+
+  /* Gallery Responsive Styles */
+  .gallery-container {
+    column-count: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* Header Elements */
+  #contact,
+  footer {
+    height: auto; 
+  }
+  #profile {
+    height: auto; 
+    margin-bottom: 0;
+    padding: 2rem 0; 
+  }
+  
+  /* Typography */
+  article {
+    font-size: 1rem;
+  }
+  .section__text {
+    text-align: center;
+  }
+  .section__text__p1,
+  .section__text__p2 {
+    text-align: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .text-container {
+    text-align: justify;
+  }
+  
+  /* Navigation */
+  footer nav {
+    height: fit-content;
+    margin-bottom: 0.5rem;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 0.75rem; 
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  /* Images and Layout */
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  
+  /* Project Elements */
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .project-container iframe,
+  .video-container iframe {
+    height: auto;
+  }
+  
+  /* Typing Container */
+  #typing-container {
+    display: block;
+    min-height: 3.5rem;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #typing-name {
+    display: inline-block;
+    min-height: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  .section__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 250px; 
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    height: 3rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+  }
+
+  /* Footer Responsive Styles */
+  footer {
+    position: absolute;
+    bottom: 0;       
+    left: 0;         
+    width: 100%;     
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    padding: 0.75rem 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    box-sizing: border-box;
+    margin: 0; 
+  }
+
+  body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0; 
+    padding: 0; 
+    padding-bottom: 8rem; 
+  }
+
+  footer nav {
+    width: 100%;
+    padding: 0 1rem; 
+  }
+
+  .nav-links-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  footer .nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  footer .nav-links li {
+    flex: none;
+    text-align: center;
+  }
+
+  footer .nav-links a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem; 
+    font-size: 0.65rem;
+    color: #666;
+    gap: 0.2rem;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  footer .nav-links a::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 0.9rem;
+    margin-right: 0.3rem;
+    color: #666;
+    display: inline-block;
+    width: 1rem;
+    text-align: center;
+  }
+
+  footer .nav-links li:nth-child(1) a::before { content: "\f015"; }
+  footer .nav-links li:nth-child(2) a::before { content: "\f0b1"; }
+  footer .nav-links li:nth-child(3) a::before { content: "\f0ac"; }
+  footer .nav-links li:nth-child(4) a::before { content: "\f11b"; }
+  footer .nav-links li:nth-child(5) a::before { content: "\f03e"; }
+
+  /* Hover Effects */
+  footer .nav-links a:hover {
+    color: #000;
+    text-decoration: none;
+  }
+
+  footer .nav-links a:hover::before {
+    color: #000;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #666;
+    padding: 0.3rem 1rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Ensure Content Above Footer Doesn't Overlap */
+  body {
+    padding-bottom: 8rem;
+  }
+}
