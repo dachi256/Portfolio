@@ -1,7 +1,7 @@
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
   }
   #contact,
   #projects {
@@ -42,13 +42,42 @@
   section {
     margin: 0 5%;
   }
+
+  /* About Me Section */
+  #about .section-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
   .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+    width: 45%;
+    max-width: 400px;
+    margin: 0;
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: center; 
+  }
+  .about-details-container {
+    width: 50%;
+    max-width: 600px;
   }
   .about-containers {
-    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .details-container {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+  .text-container {
+    width: 100%;
+    text-align: justify;
   }
 
   /* Project Grid */
@@ -88,9 +117,9 @@
     max-width: 100%;
   }
 
-    .project-wrapper iframe {
+  .project-wrapper iframe {
     width: 100%;
-    height: 400px !important; /* Force height for p5js iframes */
+    height: 400px !important;
   }
 
   /* Gallery Responsive Styles */
@@ -100,10 +129,35 @@
 }
 
 @media screen and (max-width: 768px) {
-  .about-containers {
-    grid-template-columns: 1fr;
+  /* About Me Section */
+  #about .section-container {
+    flex-direction: column;
+    align-items: center;
   }
-  #projects .about-containers {
+  .section__pic-container {
+    width: 100%;
+    max-width: 300px;
+  }
+  .about-details-container {
+    width: 100%;
+  }
+  .about-containers {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .details-container {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 0.25rem;
+  }
+  .text-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  /* Project Grid */
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
@@ -122,7 +176,7 @@
   #profile {
     height: auto; 
     margin-bottom: 0;
-    padding: 2rem 0; 
+    padding: 4rem 0; 
   }
   
   /* Typography */
@@ -146,8 +200,40 @@
   }
   .text-container {
     text-align: justify;
+    padding: 0 1rem;
   }
   
+  /* Images and Layout */
+  .section__pic-container {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 2rem;
+  }
+  .about-details-container {
+    width: 100%;
+  }
+
+  /* About Me Section */
+  .details-container {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0.25rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .details-container .icon {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  .details-container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .details-container p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
   /* Navigation */
   footer nav {
     height: fit-content;
@@ -166,14 +252,7 @@
   .logo {
     font-size: 1.5rem;
   }
-  
-  /* Images and Layout */
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-  
+
   /* Project Elements */
   .project-grid {
     grid-template-columns: 1fr;
@@ -231,7 +310,7 @@
     box-sizing: border-box;
     margin: 0; 
     height: auto; 
-}
+  }
 
   body {
     position: relative;
@@ -260,14 +339,14 @@
     margin: 0 auto; 
     width: auto; 
     max-width: none; 
-}
+  }
 
-footer .nav-links li {
+  footer .nav-links li {
     flex: 0 1 auto; 
     text-align: center;
-}
+  }
 
-footer .nav-links a {
+  footer .nav-links a {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -278,13 +357,13 @@ footer .nav-links a {
     gap: 0.2rem;
     text-decoration: none;
     white-space: nowrap;
-}
+  }
 
-footer .nav-links a::before {
+  footer .nav-links a::before {
     font-size: 0.8rem; 
     margin-right: 0.2rem; 
     width: 0.8rem; 
-}
+  }
 
   footer .nav-links li:nth-child(1) a::before { content: "\f015"; }
   footer .nav-links li:nth-child(2) a::before { content: "\f0b1"; }
@@ -317,6 +396,3 @@ footer .nav-links a::before {
     padding-bottom: 8rem;
   }
 }
-
-
-
