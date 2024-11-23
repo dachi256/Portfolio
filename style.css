@@ -523,13 +523,14 @@ section {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   justify-items: center;
+  margin-top: 2rem;
 }
 
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(255, 255, 255);
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
 }
