@@ -964,3 +964,25 @@ iframe {
   opacity: 1;
   transform: scale(1);
 }
+
+
+/* Iframe placeholder styles */
+.iframe-placeholder {
+  position: relative;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.iframe-placeholder .placeholder-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.iframe-placeholder .placeholder-content i {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.8);
+}

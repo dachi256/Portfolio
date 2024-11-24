@@ -238,3 +238,81 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('Initialization error:', error);
   }
 });
+
+// Create a placeholder element to show before iframe loads
+function createPlaceholder(width, height, imageUrl) {
+  const placeholder = document.createElement('div');
+  placeholder.className = 'iframe-placeholder';
+  placeholder.style.width = width + 'px';
+  placeholder.style.height = height + 'px';
+  placeholder.style.backgroundImage = `url(${imageUrl})`;
+  placeholder.style.backgroundSize = 'cover';
+  placeholder.style.backgroundPosition = 'center';
+
+  placeholder.innerHTML = `
+      <div class="placeholder-content">
+          <i class="fas fa-play-circle"></i>
+      </div>
+  `;
+  return placeholder;
+}
+
+// Load iframe when placeholder is clicked
+function loadIframe(iframeData, placeholder) {
+  const iframe = document.createElement('iframe');
+  
+  // Create a loading indicator
+  const loading = document.createElement('div');
+  loading.className = 'iframe-loading';
+  loading.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+  placeholder.appendChild(loading);
+
+  // Set up iframe attributes
+  iframe.width = iframeData.width;
+  iframe.height = iframeData.height;
+  iframe.style.border = 'none';
+  iframe.style.borderRadius = '0.5rem';
+  iframe.style.display = 'block'; // Ensure iframe is visible
+
+  // Only set src after attaching onload handler
+  iframe.onload = () => {
+    if (loading.parentNode) {
+      loading.parentNode.removeChild(loading);
+    }
+  };
+  
+  // Replace placeholder with iframe
+  placeholder.parentNode.replaceChild(iframe, placeholder);
+  
+  // Set src after adding to DOM to trigger load
+  iframe.src = iframeData.src;
+}
+
+// Initialize lazy loading for all p5.js iframes
+function initializeLazyIframes() {
+  const iframes = document.querySelectorAll('.project-wrapper iframe');
+  
+  iframes.forEach(iframe => {
+      if (iframe.dataset.src && iframe.dataset.src.includes('editor.p5js.org')) {
+          // Store iframe data
+          const iframeData = {
+              src: iframe.dataset.src,
+              width: iframe.width || '720',
+              height: iframe.height || '700',
+              placeholderImage: iframe.dataset.placeholderImage || './default-placeholder.jpg' // Provide a default if needed
+          };
+          
+          // Create and insert placeholder
+          const placeholder = createPlaceholder(iframeData.width, iframeData.height, iframeData.placeholderImage);
+          iframe.parentElement.replaceChild(placeholder, iframe);
+          
+          // Add click event listener
+          placeholder.addEventListener('click', () => {
+              loadIframe(iframeData, placeholder);
+          });
+      }
+  });
+}
+
+// Call initialization when DOM is loaded
+document.addEventListener('DOMContentLoaded', initializeLazyIframes);
