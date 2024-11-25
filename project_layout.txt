@@ -3,12 +3,20 @@
 [.git] (...)
 [assets]
     ├── .DS_Store
+    ├── android-chrome-192x192.png
+    ├── android-chrome-512x512.png
+    ├── apple-touch-icon.png
     ├── dachi.png
     ├── education.png
     ├── email.png
+    ├── favicon-16x16.png
+    ├── favicon-32x32.png
+    ├── favicon.ico
     ├── github.png
     ├── instagram.png
     ├── linkedin.png
+    ├── maze-preview.png
+    ├── ophanim-preview.png
     ├── phone.png
     ├── photos1.jpg
     ├── photos10.jpg
@@ -32,7 +40,8 @@
     ├── project-4.png
     ├── project-5.png
     ├── project-6.png
-    └── resume 2.pdf
+    ├── site.webmanifest
+    └── thumbwave-preview.png
 index.html
 mediaqueries.css
 more-photos.html
