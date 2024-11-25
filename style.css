@@ -894,8 +894,8 @@ footer .nav-links a:hover::before {
 }
 
 .video-container iframe {
-  width: 90%;
-  aspect-ratio: 16 / 9;
+  width: 720px;  
+  aspect-ratio: 16 / 9;  
   border-radius: 0.5rem;
 }
 
